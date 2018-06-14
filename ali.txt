@@ -1,8 +1,0 @@
-2018-06-14 14:26:20,174 - logg.py[line:46] - INFO: {'code': '40004', 'msg': 'Business Failed', 'sub_code': 'ACQ.TRADE_NOT_EXIST', 'sub_msg': '交易不存在', 'buyer_pay_amount': '0.00', 'invoice_amount': '0.00', 'out_trade_no': '456456465', 'point_amount': '0.00', 'receipt_amount': '0.00'}
-2018-06-14 14:32:13,444 - logg.py[line:46] - INFO: {'code': '40004', 'msg': 'Business Failed', 'sub_code': 'ACQ.TRADE_NOT_EXIST', 'sub_msg': '交易不存在', 'buyer_pay_amount': '0.00', 'invoice_amount': '0.00', 'out_trade_no': '152895792387796', 'point_amount': '0.00', 'receipt_amount': '0.00'}
-2018-06-14 15:33:23,663 - logg.py[line:50] - ERROR: 转账失败：ISV权限不足，建议在开发者中心检查签约是否已经生效
-2018-06-14 15:34:10,784 - logg.py[line:44] - WARNING: 转账失败：ISV权限不足，建议在开发者中心检查签约是否已经生效
-2018-06-14 15:34:54,124 - logg.py[line:44] - WARNING: 转账失败：ISV权限不足，建议在开发者中心检查签约是否已经生效
-2018-06-14 15:37:18,433 - logg.py[line:44] - WARNING: 转账失败：ISV权限不足，建议在开发者中心检查签约是否已经生效
-2018-06-14 15:38:00,208 - logg.py[line:44] - WARNING: 转账失败：ISV权限不足，建议在开发者中心检查签约是否已经生效
-2018-06-14 15:38:41,763 - warning[line:44] - WARNING: 转账失败：ISV权限不足，建议在开发者中心检查签约是否已经生效
