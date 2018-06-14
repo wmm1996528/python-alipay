@@ -31,7 +31,7 @@ def parse_notify():
     pass
 
 if __name__ == '__main__':
-    # app.run()
+    app.run()
     sql = '''insert alipay.trade 
 (user,trade_no,code,total_amount,buyer_logon_id)
 values(%s, "%s", '%s', '%s', '%s');
