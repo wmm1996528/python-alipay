@@ -1,9 +1,12 @@
 from flask import Flask
 from flask import *
 import mysql.connector
+
 app = Flask(__name__)
-conn = mysql.connector.connect(host='47.98.165.242',user='root', password='123456',db='alipay')
+conn = mysql.connector.connect(host='47.98.165.242', user='root', password='123456', db='alipay')
 cursor = conn.cursor()
+
+
 @app.route('/ali/return')
 def return_page():
     return 'zhifuchengg le '
@@ -27,8 +30,11 @@ def notify():
         gmt_payment = data.get('gmt_payment')
         print(trade_status)
         return trade_status
+
+
 def parse_notify():
     pass
+
 
 if __name__ == '__main__':
     app.run()

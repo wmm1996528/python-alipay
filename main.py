@@ -142,7 +142,7 @@ class Alipay():
             'charset': 'utf-8',
             'sign_type': 'RSA2',
             'version': '1.0',
-            'notify_url':self.notify_url,
+            'notify_url': self.notify_url,
             'return_url': self.return_url,
             'biz_content': {
                 "body": '测试商品',
