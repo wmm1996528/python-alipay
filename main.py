@@ -28,9 +28,18 @@ class Alipay():
         self.logger = logging.getLogger('ali')
 
     def timestamp(self):
+        '''
+        时间戳
+        :return:  时间戳
+        '''
         return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
 
     def _ordered_data(self, data):
+        '''
+        将data排序
+        :param data:
+        :return:
+        '''
         complex_keys = []
         for key, value in data.items():
             if isinstance(value, dict):
@@ -43,12 +52,23 @@ class Alipay():
         return sorted([(k, v) for k, v in data.items()])
 
     def sign(self, unsigned_string):
+        '''
+        对字符串签名
+        :param unsigned_string:
+        :return:
+        '''
         key = RSA.import_key(PRIVATEKEY)
         h = SHA256.new(unsigned_string.encode())
         sign = PKCS1_v1_5.new(key).sign(h)
         return base64.b64encode(sign)  # 转码方便传递的格式
 
     def _verify(self, message, signature):
+        '''
+        验证返回签名是否正确
+        :param message:
+        :param signature:
+        :return:
+        '''
         # 开始计算签名
         key = RSA.import_key(ALIPAY_KEY)
         h = SHA256.new(message.encode())
@@ -180,8 +200,9 @@ class Alipay():
     def trans_toaccount(self, userid, mount):
         '''
         转账到支付宝账户
+        :param userid: 转账支付宝
+        :param mount: 金额
         :return:
-
         '''
         out_biz_no = str(int(time.time() * 100000))
         data = {
